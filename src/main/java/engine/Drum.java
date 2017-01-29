@@ -18,10 +18,12 @@ public class Drum {
     public enum EType {
         CYMBAL_SOFT,
         CYMBAL_HARD,
+        CYMBAL_SPLASH,
         HAT_OPEN,
         DRUM_SOFT,
         DRUM_HARD,
         CHOKE,
+        GHOST,
         SNARE_RIM
     }
 }
