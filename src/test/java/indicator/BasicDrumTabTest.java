@@ -23,7 +23,6 @@ public class BasicDrumTabTest {
 
     @org.junit.Test
     public void drawNextTabPage() throws Exception {
-
     }
 
 }

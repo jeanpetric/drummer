@@ -16,7 +16,7 @@ public abstract class DrumTab {
         this.track = track;
     }
 
-    public abstract void drawTabPage(int start, int end, int length);
+    public abstract void drawTabPage(int start, int end, int pageLength);
     public abstract void drawNextTabPage();
 
     public void drawTabLine(Drum.EDrum drum) {
