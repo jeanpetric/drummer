@@ -20,9 +20,11 @@ public class HitNotation extends Hit {
             } else if (type == Drum.EType.CHOKE) {
                 result = CHOKE;
             } else if (type == Drum.EType.CYMBAL_SPLASH) {
-                result = CYMBAL_SPLASH; // haven't seen that before!
+                result = CYMBAL_SPLASH;
             } else if (type == Drum.EType.GHOST) {
                 result = GHOST;
+            } else if (type == Drum.EType.CYMBAL_CHINA) {
+                result = CYMBAL_CHINA;
             }
         }
 
@@ -49,6 +51,8 @@ public class HitNotation extends Hit {
                 result = GHOST;
             } else if (type == Drum.EType.SNARE_RIM) {
                 result = SNARE_RIM;
+            } else if (type == Drum.EType.DRAG) {
+                result = DRAG;
             }
         }
 

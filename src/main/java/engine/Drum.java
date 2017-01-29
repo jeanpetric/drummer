@@ -24,6 +24,8 @@ public class Drum {
         DRUM_HARD,
         CHOKE,
         GHOST,
-        SNARE_RIM
+        SNARE_RIM,
+        CYMBAL_CHINA,
+        DRAG
     }
 }
