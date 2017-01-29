@@ -5,7 +5,7 @@ package engine;
  */
 public abstract class Hit {
     protected final String CYMBAL_SOFT = "x";
-    protected final String CYMBAL_HARD = "x";
+    protected final String CYMBAL_HARD = "X";
     protected final String HAT_OPEN = "o";
     protected final String DRUM_SOFT = "o";
     protected final String DRUM_HARD = "O";
