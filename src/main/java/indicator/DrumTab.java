@@ -11,22 +11,28 @@ public abstract class DrumTab {
     protected int startPosition;
     protected int endPosition;
     protected int pageLength;
+    protected String currentTab;
 
     public DrumTab(Track track) {
+        currentTab = "";
         this.track = track;
     }
 
-    public abstract void drawTabPage(int start, int end, int pageLength);
-    public abstract void drawNextTabPage();
+    public abstract DrumTab drawTabPage(int start, int end, int pageLength);
+    public abstract DrumTab drawNextTabPage();
+
+    public String getCurrentTab() {
+        return currentTab;
+    }
 
     public void drawTabLine(Drum.EDrum drum) {
         for (int position = startPosition; position <= endPosition; position++) {
             if (track.get(position).get(drum) == null) {
-                System.out.print("- ");
+                currentTab += "- ";
             } else {
-                System.out.print(track.get(position).get(drum).symbol() + " ");
+                currentTab += track.get(position).get(drum).symbol() + " ";
             }
         }
-        System.out.print("\n");
+        currentTab += "\n";
     }
 }

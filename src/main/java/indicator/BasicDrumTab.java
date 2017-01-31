@@ -12,17 +12,19 @@ public class BasicDrumTab extends DrumTab {
         super(track);
     }
 
-    public void drawTabPage(int start, int end, int length) {
+    public DrumTab drawTabPage(int start, int end, int length) {
         startPosition = start;
         endPosition = end;
         pageLength = length;
         drawTab();
+        return this;
     }
 
-    public void drawNextTabPage() {
+    public DrumTab drawNextTabPage() {
         startPosition = startPosition + pageLength;
         endPosition = endPosition + pageLength;
         drawTabPage(startPosition, endPosition, pageLength);
+        return this;
     }
 
     private void drawTab() {
