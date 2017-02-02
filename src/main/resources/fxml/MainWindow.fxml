@@ -7,7 +7,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainWindow">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
@@ -39,8 +38,11 @@
                   <Button fx:id="play" mnemonicParsing="false" onAction="#play" text="Play" />
                   <Button fx:id="pause" mnemonicParsing="false" onAction="#pause" text="Pause" />
                   <Button fx:id="stop" mnemonicParsing="false" onAction="#stop" text="Stop" />
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#reset" text="Reset" />
                   <Button fx:id="backward" mnemonicParsing="false" onAction="#backward" text="&lt;&lt;" />
                   <Button fx:id="forward" mnemonicParsing="false" onAction="#forward" text="&gt;&gt;" />
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <TextField fx:id="tempo" onKeyPressed="#updateTempo" prefHeight="25.0" prefWidth="69.0" text="60" />
                </children>
             </HBox>
             <Pane prefHeight="200.0" prefWidth="200.0">
@@ -50,7 +52,7 @@
                         <Font name="Monospaced Regular" size="14.0" />
                      </font>
                   </TextArea>
-                  <Rectangle fx:id="tabCursor" arcHeight="5.0" arcWidth="5.0" fill="#fbff1f73" height="170.0" layoutX="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="17.0" />
+                  <Rectangle fx:id="tabCursor" arcHeight="5.0" arcWidth="5.0" fill="#fbff1f73" height="170.0" layoutX="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="18.0" />
                </children>
             </Pane>
          </children>

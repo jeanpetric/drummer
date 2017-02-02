@@ -27,7 +27,7 @@ public class App extends Application {
         controller.adjustSize(primaryStage);
 
         primaryStage.setTitle("Drummer");
-        primaryStage.setScene(new Scene(root, 1024, 400));
+        primaryStage.setScene(new Scene(root, 1200, 400));
         primaryStage.show();
     }
 }
