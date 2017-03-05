@@ -10,7 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -33,9 +32,9 @@ public class MainWindow extends Window {
     private Track track = null; // delete this after implementing load tab
 
     public void load(ActionEvent actionEvent) {
-        FileChooser tabFile = new FileChooser();
-        tabFile.setTitle("Open a tab");
-        tabFile.showOpenDialog(this);
+//        FileChooser tabFile = new FileChooser();
+//        tabFile.setTitle("Open a tab");
+//        tabFile.showOpenDialog(this);
         track = LikeAStoneResource.getTrack();
         track.copyBar(1, 16, 1*16+1);
         track.copyBar(1, 16, 2*16+1);
