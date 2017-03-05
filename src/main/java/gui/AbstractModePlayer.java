@@ -1,10 +1,10 @@
 package gui;
 
+import engine.Track;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
@@ -15,6 +15,7 @@ public abstract class AbstractModePlayer {
     protected TextArea tabArea;
     protected Rectangle tabCursor;
     protected TextField tempo;
+    protected Track track;
 
     protected static final int MAX_CYCLE = 16*4;
     protected static final double CURSOR_X_OFFSET = 16.83;
@@ -22,10 +23,11 @@ public abstract class AbstractModePlayer {
     protected int cycle;
     protected boolean pause = false;
 
-    public AbstractModePlayer(TextArea tab, Rectangle cursor, TextField tempo) {
+    public AbstractModePlayer(TextArea tab, Rectangle cursor, TextField tempo, Track track) {
         this.tabArea = tab;
         this.tabCursor = cursor;
         this.tempo = tempo;
+        this.track = track;
     }
 
     public void play() {

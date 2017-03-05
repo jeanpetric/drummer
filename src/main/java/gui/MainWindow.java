@@ -37,7 +37,7 @@ public class MainWindow {
         track.copyBar(1, 16, 2*16+1);
         track.copyBar(1, 16, 3*16+1);
         tabArea.setText(tab.drawTabPage(1, track.size(), track.size()).getCurrentTab());
-        player = new RunningModePlayer(tabArea, tabCursor, tempo);
+        player = new StaticModePlayer(tabArea, tabCursor, tempo, track);
     }
 
     public void play(ActionEvent actionEvent) throws Exception {
