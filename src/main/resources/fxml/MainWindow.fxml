@@ -47,12 +47,21 @@
             </HBox>
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <TextArea fx:id="tabArea" editable="false">
+                  <TextArea fx:id="tabArea" editable="false" layoutX="27.0" prefHeight="173.0" prefWidth="330.0">
                      <font>
                         <Font name="Monospaced Regular" size="14.0" />
                      </font>
                   </TextArea>
-                  <Rectangle fx:id="tabCursor" arcHeight="5.0" arcWidth="5.0" fill="#fbff1f73" height="170.0" layoutX="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="18.0" />
+                  <Rectangle fx:id="tabCursor" arcHeight="5.0" arcWidth="5.0" fill="#fbff1f73" height="170.0" layoutX="31.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="18.0" />
+                  <Label layoutX="6.0" layoutY="6.0" text="Cr" />
+                  <Label layoutX="6.0" layoutY="24.0" text="Ri" />
+                  <Label layoutX="6.0" layoutY="42.0" text="Hh" />
+                  <Label layoutX="6.0" layoutY="60.0" text="Sn" />
+                  <Label layoutX="6.0" layoutY="78.0" text="T1" />
+                  <Label layoutX="6.0" layoutY="96.0" text="T2" />
+                  <Label layoutX="6.0" layoutY="114.0" text="Ft" />
+                  <Label layoutX="6.0" layoutY="132.0" text="B" />
+                  <Label layoutX="6.0" layoutY="150.0" text="P" />
                </children>
             </Pane>
          </children>
