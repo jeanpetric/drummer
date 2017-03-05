@@ -44,11 +44,8 @@ public class MainWindow extends Window {
         setPlayer();
     }
 
-    private void setPlayer() {
-        player = new StaticModePlayer(tabArea, tabCursor, tempo, track);
-    }
-
     public void play(ActionEvent actionEvent) throws Exception {
+        setPlayer();
         player.play();
     }
 
@@ -86,6 +83,16 @@ public class MainWindow extends Window {
             stage.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    //TODO: this should really be handled by some kind of factory...
+    private void setPlayer() {
+        String playerMode = DrummerProperties.getProperty("playerMode");
+        if (playerMode.equals("running")) {
+            player = new RunningModePlayer(tabArea, tabCursor, tempo, track);
+        } else {
+            player = new StaticModePlayer(tabArea, tabCursor, tempo, track);
         }
     }
 }

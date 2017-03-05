@@ -43,8 +43,9 @@ public abstract class AbstractModePlayer {
     }
 
     public void reset() {
+        cycle = 0;
+        tabCursor.setX(0);
         resetTimer();
-        updateTabCursor();
     }
 
     public void backward() {
