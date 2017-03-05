@@ -27,11 +27,8 @@ public class MainWindow {
     @FXML
     TextField tempo;
 
-    private static final int MAX_CYCLE = 16*4;
-    private static final double CURSOR_X_OFFSET = 16.83;
-    private Timeline timer;
-    private int cycle;
-    private boolean pause = false;
+    private AbstractModePlayer player = null;
+
 
     Line line = new Line();
 
@@ -42,28 +39,23 @@ public class MainWindow {
         track.copyBar(1, 16, 2*16+1);
         track.copyBar(1, 16, 3*16+1);
         tabArea.setText(tab.drawTabPage(1, track.size(), track.size()).getCurrentTab());
+        player = new RunningModePlayer(tabArea, tabCursor, tempo);
     }
 
     public void play(ActionEvent actionEvent) throws Exception {
-        createTimer(calculateTempo(tempo.getText()));
-    }
-
-    private double calculateTempo(String text) {
-        // only valid for quater notes, right? (1/4)
-        return 60. / Integer.valueOf(text) * 0.25 * 1000;
+        player.play();
     }
 
     public void pause(ActionEvent actionEvent) {
-        pause = pause == false ? true : false;
+        player.pause();
     }
 
     public void stop(ActionEvent actionEvent) {
-        resetTimer();
+        player.stop();
     }
 
     public void reset(ActionEvent actionEvent) {
-        resetTimer();
-        updateCursor();
+        player.reset();
     }
 
     public void adjustSize(Stage stage) {
@@ -71,50 +63,10 @@ public class MainWindow {
     }
 
     public void backward(ActionEvent actionEvent) {
-        tabCursor.setX(tabCursor.getX() - tabCursor.getWidth());
+        player.backward();
     }
 
     public void forward(ActionEvent actionEvent) {
-        updateCycle();
-        updateCursor();
+        player.forward();
     }
-
-    public void updateTempo(KeyEvent keyEvent) {
-//        createTimer(tempo.getText());
-    }
-
-    private void createTimer(double duration) {
-        System.out.println(duration);
-        resetTimer();
-        timer = new Timeline(new KeyFrame(Duration.millis(duration), event -> {
-            updateCycle();
-            updateCursor();
-        }));
-        timer.setCycleCount(Timeline.INDEFINITE);
-        timer.play();
-    }
-
-    private void updateCycle() {
-        if (pause == true) {
-            return;
-        }
-        cycle++;
-        if (cycle >= MAX_CYCLE) {
-            cycle = 0;
-        }
-    }
-
-    private void updateCursor() {
-        tabCursor.setX(CURSOR_X_OFFSET*cycle);
-    }
-
-    private void resetTimer() {
-        pause = false;
-        cycle = -1;
-        if (timer != null) {
-            timer.stop();
-        }
-        timer = null;
-    }
-
 }

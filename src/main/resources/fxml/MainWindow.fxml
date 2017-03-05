@@ -42,7 +42,7 @@
                   <Button fx:id="backward" mnemonicParsing="false" onAction="#backward" text="&lt;&lt;" />
                   <Button fx:id="forward" mnemonicParsing="false" onAction="#forward" text="&gt;&gt;" />
                   <Separator orientation="VERTICAL" prefHeight="200.0" />
-                  <TextField fx:id="tempo" onKeyPressed="#updateTempo" prefHeight="25.0" prefWidth="69.0" text="60" />
+                  <TextField fx:id="tempo" prefHeight="25.0" prefWidth="69.0" text="60" />
                </children>
             </HBox>
             <Pane prefHeight="200.0" prefWidth="200.0">
