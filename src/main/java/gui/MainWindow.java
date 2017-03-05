@@ -3,17 +3,16 @@ package gui;
 import engine.Track;
 import indicator.BasicDrumTab;
 import indicator.DrumTab;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 
 /**
@@ -28,7 +27,6 @@ public class MainWindow {
     TextField tempo;
 
     private AbstractModePlayer player = null;
-
 
     Line line = new Line();
 
@@ -68,5 +66,18 @@ public class MainWindow {
 
     public void forward(ActionEvent actionEvent) {
         player.forward();
+    }
+
+    public void openConfiguration(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("fxml/ConfigurationWindow.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Configuration");
+            stage.setScene(new Scene(root1));
+            stage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
