@@ -12,13 +12,16 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.Window;
+import utils.LikeAStoneResource;
 
 
 /**
  * Created by jean on 30/01/17.
  */
-public class MainWindow {
+public class MainWindow extends Window {
     @FXML
     TextArea tabArea;
     @FXML
@@ -27,16 +30,22 @@ public class MainWindow {
     TextField tempo;
 
     private AbstractModePlayer player = null;
-
-    Line line = new Line();
+    private Track track = null; // delete this after implementing load tab
 
     public void load(ActionEvent actionEvent) {
-        Track track = LikeAStoneResource.getTrack();
-        DrumTab tab = new BasicDrumTab(track);
+        FileChooser tabFile = new FileChooser();
+        tabFile.setTitle("Open a tab");
+        tabFile.showOpenDialog(this);
+        track = LikeAStoneResource.getTrack();
         track.copyBar(1, 16, 1*16+1);
         track.copyBar(1, 16, 2*16+1);
         track.copyBar(1, 16, 3*16+1);
+        DrumTab tab = new BasicDrumTab(track);
         tabArea.setText(tab.drawTabPage(1, track.size(), track.size()).getCurrentTab());
+        setPlayer();
+    }
+
+    private void setPlayer() {
         player = new StaticModePlayer(tabArea, tabCursor, tempo, track);
     }
 

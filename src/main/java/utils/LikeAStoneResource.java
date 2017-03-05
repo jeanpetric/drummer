@@ -1,4 +1,4 @@
-package gui;
+package utils;
 
 import engine.Drum;
 import engine.HitNotation;
