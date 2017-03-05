@@ -15,7 +15,7 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <ChoiceBox prefWidth="150.0" value="Running Box" GridPane.columnIndex="1">
+      <ChoiceBox fx:id="playerMode" onMousePressed="#setPlayerMode" prefWidth="150.0" GridPane.columnIndex="1">
           <items>
               <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Running Box" />
