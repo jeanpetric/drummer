@@ -12,7 +12,8 @@ public class Drum {
         HIGH_TOM,
         LOW_TOM,
         FLOOR_TOM,
-        BASS_DRUM
+        BASS_DRUM,
+        HAT_PEDAL
     }
 
     public enum EType {

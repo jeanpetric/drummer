@@ -26,5 +26,6 @@ public class DrumMap extends HashMap<String, Drum.EDrum> {
         put("FT", Drum.EDrum.FLOOR_TOM);
         put("B", Drum.EDrum.BASS_DRUM);
         put("BD", Drum.EDrum.BASS_DRUM);
+        put("P", Drum.EDrum.HAT_PEDAL);
     }
 }

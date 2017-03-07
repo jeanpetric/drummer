@@ -41,8 +41,9 @@ public class HitNotation extends Hit {
             }
         }
 
-        // SNARE
-        else if (drum == Drum.EDrum.SNARE) {
+        // SNARE and TOMs
+        else if (drum == Drum.EDrum.SNARE || drum == Drum.EDrum.HIGH_TOM
+                || drum == Drum.EDrum.LOW_TOM || drum == Drum.EDrum.FLOOR_TOM) {
             if (type == Drum.EType.DRUM_HARD) {
                 result = DRUM_HARD;
             } else if (type == Drum.EType.DRUM_SOFT) {
@@ -59,6 +60,11 @@ public class HitNotation extends Hit {
         // BASS
         else if (drum == Drum.EDrum.BASS_DRUM) {
             result = DRUM_SOFT;
+        }
+
+        // HI HAT PEDAL
+        else if (drum == Drum.EDrum.HAT_PEDAL) {
+            result = CYMBAL_HARD;
         }
 
         return result;
