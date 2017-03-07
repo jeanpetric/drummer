@@ -14,7 +14,12 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import tab.TabLoader;
+import tab.TabVisitor;
 import utils.LikeAStoneResource;
+
+import java.io.File;
+import java.io.IOException;
 
 
 /**
@@ -31,14 +36,14 @@ public class MainWindow extends Window {
     private AbstractModePlayer player = null;
     private Track track = null; // delete this after implementing load tab
 
-    public void load(ActionEvent actionEvent) {
-//        FileChooser tabFile = new FileChooser();
-//        tabFile.setTitle("Open a tab");
-//        tabFile.showOpenDialog(this);
-        track = LikeAStoneResource.getTrack();
-        track.copyBar(1, 16, 1*16+1);
-        track.copyBar(1, 16, 2*16+1);
-        track.copyBar(1, 16, 3*16+1);
+    public void load(ActionEvent actionEvent) throws IOException {
+        FileChooser tabFile = new FileChooser();
+        tabFile.setTitle("Open a tab");
+        File selectedFile = tabFile.showOpenDialog(this);
+        TabLoader tabLoader = new TabLoader();
+        tabLoader.load(selectedFile.getCanonicalPath().toString());
+        TabVisitor tabTrack = new TabVisitor(tabLoader);
+        track = tabTrack.getTrack();
         DrumTab tab = new BasicDrumTab(track);
         tabArea.setText(tab.drawTabPage(1, track.size(), track.size()).getCurrentTab());
         setPlayer();
