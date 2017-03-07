@@ -6,7 +6,7 @@
 
     <groupId>uk.ac</groupId>
     <artifactId>drummer</artifactId>
-    <version>0.1</version>
+    <version>0.2</version>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
