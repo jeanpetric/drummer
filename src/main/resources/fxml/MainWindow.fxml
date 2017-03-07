@@ -43,7 +43,7 @@
             </HBox>
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <TextArea fx:id="tabArea" editable="false" layoutX="27.0" prefHeight="173.0" prefWidth="330.0">
+                  <TextArea fx:id="tabArea" editable="false" layoutX="27.0" prefHeight="194.0" prefWidth="330.0">
                      <font>
                         <Font name="Monospaced Regular" size="14.0" />
                      </font>

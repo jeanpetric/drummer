@@ -23,7 +23,7 @@ public class TabVisitor {
         String line;
 
         while ((line = tabLoader.nextLine()) != null) {
-            if (line.equals("\n")) {
+            if (line.equals("\n") || line.equals("")) {
                 crashBeat = lastBeat;
                 rideBeat = lastBeat;
                 hihatBeat = lastBeat;
