@@ -1,8 +1,6 @@
 package tab;
 
 import engine.Track;
-import indicator.BasicDrumTab;
-import indicator.DrumTab;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
