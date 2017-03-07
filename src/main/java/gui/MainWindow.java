@@ -16,7 +16,6 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import tab.TabLoader;
 import tab.TabVisitor;
-import utils.LikeAStoneResource;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +33,7 @@ public class MainWindow extends Window {
     TextField tempo;
 
     private AbstractModePlayer player = null;
-    private Track track = null; // delete this after implementing load tab
+    private Track track = null;
 
     public void load(ActionEvent actionEvent) throws IOException {
         FileChooser tabFile = new FileChooser();
