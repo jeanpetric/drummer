@@ -99,19 +99,6 @@ public class MainWindow extends Window {
         player.forward();
     }
 
-    public void openConfiguration(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("fxml/ConfigurationWindow.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Configuration");
-            stage.setScene(new Scene(root1));
-            stage.showAndWait();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     //TODO: this should really be handled by some kind of factory...
     private void setPlayer() {
         String playerMode = DrummerProperties.getProperty("playerMode");
