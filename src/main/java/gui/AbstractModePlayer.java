@@ -17,7 +17,6 @@ public abstract class AbstractModePlayer {
     protected TextField tempo;
     protected Track track;
 
-    protected static final double CURSOR_X_OFFSET = 16.83;
     protected Timeline timer;
     protected int cycle;
     protected boolean pause = false;
