@@ -19,6 +19,9 @@ public class StaticModePlayer extends AbstractModePlayer {
     public void updateTabArea() {
         DrumTab tab = new BasicDrumTab(track);
         tabArea.setText(tab.drawTabPage(cycle+1, track.size(), track.size()).getCurrentTab());
+        if (cycle >= track.size()) {
+            cycle = 0;
+        }
     }
 
     @Override
