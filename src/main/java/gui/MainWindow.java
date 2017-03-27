@@ -61,13 +61,15 @@ public class MainWindow extends Window {
         FileChooser tabFile = new FileChooser();
         tabFile.setTitle("Open a tab");
         File selectedFile = tabFile.showOpenDialog(this);
-        TabLoader tabLoader = new TabLoader();
-        tabLoader.load(selectedFile.getCanonicalPath().toString());
-        TabVisitor tabTrack = new TabVisitor(tabLoader);
-        track = tabTrack.getTrack();
-        DrumTab tab = new BasicDrumTab(track);
-        tabArea.setText(tab.drawTabPage(1, track.size(), track.size()).getCurrentTab());
-        setPlayer();
+        if (selectedFile != null && selectedFile.exists()) {
+            TabLoader tabLoader = new TabLoader();
+            tabLoader.load(selectedFile.getCanonicalPath().toString());
+            TabVisitor tabTrack = new TabVisitor(tabLoader);
+            track = tabTrack.getTrack();
+            DrumTab tab = new BasicDrumTab(track);
+            tabArea.setText(tab.drawTabPage(1, track.size(), track.size()).getCurrentTab());
+            setPlayer();
+        }
     }
 
     public void play(ActionEvent actionEvent) throws Exception {
