@@ -6,7 +6,7 @@ package utils;
 public class Multiplicator {
 
     public int multiplicator(int a) {
-        int result = a * a;
+        int result = a * 2 + 0;
         return result;
     }
 }
