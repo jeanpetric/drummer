@@ -19,6 +19,9 @@ public class BasicDrumTabTest {
         Track track = LikeAStoneResource.getTrack();
         DrumTab drumTab = new BasicDrumTab(track);
         drumTab.drawTabPage(1, track.size(), track.size());
+        String tab = drumTab.getCurrentTab();
+        String[] lines = tab.split("\r\n|\r|\n");
+        assertEquals(9, lines.length);
     }
 
     @org.junit.Test
