@@ -18,8 +18,7 @@ public class TrackTest {
         testTrack.copyBar(1, 16, 16*2+1);
         testTrack.copyBar(1, 16, 16*3+1);
 
-        DrumTab drumTab = new BasicDrumTab(testTrack);
-        drumTab.drawTabPage(1, testTrack.size(), testTrack.size());
+        assertEquals(16*4, testTrack.size());
     }
 
 }

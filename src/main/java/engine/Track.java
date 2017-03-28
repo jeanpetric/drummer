@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class Track extends HashMap<Number, Note> {
 
     public void copyBar(int startPosition, int endPosition, int newStartPosition) {
-        for (int position = startPosition; position <= endPosition; position++) {
+        for (int position = startPosition; position < endPosition; position++) {
             put(newStartPosition++, get(position));
         }
     }
