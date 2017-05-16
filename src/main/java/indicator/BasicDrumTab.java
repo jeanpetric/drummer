@@ -28,6 +28,7 @@ public class BasicDrumTab extends DrumTab {
     }
 
     private void drawTab() {
+        System.out.println("bump");
         drawTabLine(Drum.EDrum.CRASH);
         drawTabLine(Drum.EDrum.RIDE);
         drawTabLine(Drum.EDrum.HAT);
