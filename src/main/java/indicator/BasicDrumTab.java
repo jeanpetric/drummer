@@ -37,5 +37,6 @@ public class BasicDrumTab extends DrumTab {
         drawTabLine(Drum.EDrum.FLOOR_TOM);
         drawTabLine(Drum.EDrum.BASS_DRUM);
         drawTabLine(Drum.EDrum.HAT_PEDAL);
+        System.out.println("test defect");
     }
 }
