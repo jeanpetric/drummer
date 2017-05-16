@@ -17,7 +17,6 @@ public class BasicDrumTab extends DrumTab {
         endPosition = end;
         pageLength = length;
         drawTab();
-        System.out.println("inserting 'defect'");
         return this;
     }
 
@@ -29,7 +28,6 @@ public class BasicDrumTab extends DrumTab {
     }
 
     private void drawTab() {
-        System.out.println("bump");
         drawTabLine(Drum.EDrum.CRASH);
         drawTabLine(Drum.EDrum.RIDE);
         drawTabLine(Drum.EDrum.HAT);
