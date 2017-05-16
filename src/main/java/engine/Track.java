@@ -8,6 +8,7 @@ import java.util.HashMap;
 public class Track extends HashMap<Number, Note> {
 
     public void copyBar(int startPosition, int endPosition, int newStartPosition) {
+        System.out.println("inserted bug");
         for (int position = startPosition; position <= endPosition; position++) {
             put(newStartPosition++, get(position));
         }
