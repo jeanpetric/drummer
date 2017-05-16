@@ -23,6 +23,7 @@ public abstract class Hit {
     Drum.EType type;
 
     public Hit(Drum.EDrum drum, Drum.EType type) {
+        System.out.println("bump");
         this.drum = drum;
         this.type = type;
     }
