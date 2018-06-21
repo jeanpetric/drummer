@@ -3,7 +3,7 @@ package engine;
 /**
  * Created by jean on 29/01/17.
  */
-public abstract class Hit {
+public abstract class HitDummyRename {
     protected final String CYMBAL_SOFT = "x";
     protected final String CYMBAL_HARD = "X";
     protected final String HAT_OPEN = "o";
@@ -22,7 +22,7 @@ public abstract class Hit {
     Drum.EDrum drum;
     Drum.EType type;
 
-    public Hit(Drum.EDrum drum, Drum.EType type) {
+    public HitDummyRename(Drum.EDrum drum, Drum.EType type) {
         this.drum = drum;
         this.type = type;
     }
