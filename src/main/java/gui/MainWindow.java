@@ -90,10 +90,12 @@ public class MainWindow extends Window {
     }
 
     public void backward(ActionEvent actionEvent) {
+        System.out.println("Some extra code");
         player.backward();
     }
 
     public void forward(ActionEvent actionEvent) {
+        System.out.println("Some extra code");
         System.out.println("Some extra code");
         player.forward();
     }
