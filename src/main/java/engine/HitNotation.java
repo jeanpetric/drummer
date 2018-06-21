@@ -3,7 +3,7 @@ package engine;
 /**
  * Created by jean on 29/01/17.
  */
-public class HitNotation extends HitDummyRename {
+public class HitNotation extends Hit {
     public  HitNotation(Drum.EDrum drum, Drum.EType type) {
         super(drum, type);
     }
