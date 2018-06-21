@@ -25,6 +25,8 @@ public abstract class Hit {
     public Hit(Drum.EDrum drum, Drum.EType type) {
         this.drum = drum;
         this.type = type;
+        System.out.println("");
+        System.out.println("");
     }
 
     public abstract String symbol();
