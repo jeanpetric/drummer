@@ -89,7 +89,7 @@ public class MainWindow extends Window {
         tabArea.prefWidthProperty().bind(stage.widthProperty());
     }
 
-    public void backward3(ActionEvent actionEvent) {
+    public void backward(ActionEvent actionEvent) {
         player.backward();
     }
 
