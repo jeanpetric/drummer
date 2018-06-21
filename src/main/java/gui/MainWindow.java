@@ -89,9 +89,10 @@ public class MainWindow extends Window {
         tabArea.prefWidthProperty().bind(stage.widthProperty());
     }
 
-    public void backward2(ActionEvent actionEvent) {
+    public void backward3(ActionEvent actionEvent) {
         System.out.println("fault is here");
         player.backward();
+        System.out.println("dummy line");
     }
 
     public void forward(ActionEvent actionEvent) {
