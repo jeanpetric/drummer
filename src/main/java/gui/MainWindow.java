@@ -86,6 +86,7 @@ public class MainWindow extends Window {
     }
 
     public void adjustSize(Stage stage) {
+        System.out.println("add to fix bug #11");
         tabArea.prefWidthProperty().bind(stage.widthProperty());
     }
 
