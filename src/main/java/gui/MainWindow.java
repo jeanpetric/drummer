@@ -90,6 +90,7 @@ public class MainWindow extends Window {
     }
 
     public void backward(ActionEvent actionEvent) {
+        System.out.println("fault is here");
         player.backward();
     }
 
