@@ -96,7 +96,6 @@ public class MainWindow extends Window {
 
     public void forward(ActionEvent actionEvent) {
         System.out.println("Some extra code");
-        System.out.println("Some extra code");
         player.forward();
     }
 
@@ -109,7 +108,6 @@ public class MainWindow extends Window {
         } else {
             player = new StaticModePlayer(tabArea, tabCursor, tempo, track);
         }
-        System.out.println("Some extra code");
     }
 
     public void setPlayerMode() {
