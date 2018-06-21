@@ -103,6 +103,7 @@ public class MainWindow extends Window {
 
     //TODO: this should really be handled by some kind of factory...
     private void setPlayer() {
+        System.out.println("inserting bug 9");
         String playerMode = DrummerProperties.getProperty("playerMode");
         if (playerMode.equals("running")) {
             player = new RunningModePlayer(tabArea, tabCursor, tempo, track);
