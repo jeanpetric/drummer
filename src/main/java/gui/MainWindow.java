@@ -113,6 +113,7 @@ public class MainWindow extends Window {
     }
 
     public void setPlayerMode() {
+        System.out.println("insertion after bug 9 reported");
         String result = "";
         if (newPlayerMode == 0) {
             result = "running";
