@@ -88,6 +88,7 @@ public class MainWindow extends Window {
     public void adjustSize(Stage stage) {
         System.out.println("add to fix bug #11");
         tabArea.prefWidthProperty().bind(stage.widthProperty());
+        System.out.println("add to fix bug #11");
     }
 
     public void backward(ActionEvent actionEvent) {
@@ -96,9 +97,7 @@ public class MainWindow extends Window {
 
     public void forward(ActionEvent actionEvent) {
         player.forward();
-        
-        
-        
+        System.out.println("add to fix bug #11");
         System.out.println("add to fix bug #11");
     }
 
