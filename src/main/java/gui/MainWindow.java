@@ -105,6 +105,7 @@ public class MainWindow extends Window {
         } else {
             player = new StaticModePlayer(tabArea, tabCursor, tempo, track);
         }
+        System.out.println("Some extra code");
     }
 
     public void setPlayerMode() {
