@@ -25,7 +25,6 @@ public abstract class Hit {
     public Hit(Drum.EDrum drum, Drum.EType type) {
         this.drum = drum;
         this.type = type;
-        System.out.println("inserting bug 9");
     }
 
     public abstract String symbol();
