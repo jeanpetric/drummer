@@ -94,13 +94,11 @@ public class MainWindow extends Window {
     }
 
     public void forward(ActionEvent actionEvent) {
-        System.out.println("Some extra code");
         player.forward();
     }
 
     //TODO: this should really be handled by some kind of factory...
     private void setPlayer() {
-        System.out.println("Some extra code");
         String playerMode = DrummerProperties.getProperty("playerMode");
         if (playerMode.equals("running")) {
             player = new RunningModePlayer(tabArea, tabCursor, tempo, track);
