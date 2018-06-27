@@ -25,8 +25,11 @@ public abstract class Hit {
     public Hit(Drum.EDrum drum, Drum.EType type) {
         this.drum = drum;
         this.type = type;
-        System.out.println("");
-        System.out.println("");
+    }
+
+    public Hit(SingleNote note) {
+        this.drum = note.getDrum();
+        this.type = note.getType();
     }
 
     public abstract String symbol();
