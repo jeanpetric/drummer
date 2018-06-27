@@ -14,7 +14,7 @@ public class DrummerProperties {
             properties.load(inputStream);
             inputStream.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            properties.setProperty("playerMode", "running");
         }
         return properties.getProperty(key);
     }

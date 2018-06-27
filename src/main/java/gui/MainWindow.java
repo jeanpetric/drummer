@@ -83,7 +83,6 @@ public class MainWindow extends Window {
 
     public void reset(ActionEvent actionEvent) {
         player.reset();
-        System.out.println("fault fixed here");
     }
 
     public void adjustSize(Stage stage) {
