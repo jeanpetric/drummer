@@ -7,5 +7,10 @@
 Drum tab player
 
 
+# compilation
 
+mvn package
 
+# running
+
+java -cp drummer-0.2.jar gui.App
